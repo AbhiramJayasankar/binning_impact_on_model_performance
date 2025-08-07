@@ -34,9 +34,13 @@ def evaluate_model(df, dataset_name):
     print("Top 10 Features by Coefficient Magnitude:\n", top_features)
 
 if __name__ == "__main__":
-    original_df = pd.read_csv("data/merged_raw_sampled_500.csv")
+    # original_df = pd.read_csv("data/merged_raw_sampled_500.csv")
+    original_df = pd.read_csv("data/merged_raw_sampled_500_date_only.csv")
+
     # binned_df = pd.read_csv("data/discretized_raw_sampled_500.csv")
     # binned_df = pd.read_csv("data/discretized_month_raw_sampled_500.csv")
-    binned_df = pd.read_csv("data/discretized_d3_raw_sampled_500.csv")
+    binned_df = pd.read_csv("data/merged_raw_sampled_500_week_month.csv")
+    # binned_df = pd.read_csv("data/discretized_d3_raw_sampled_500.csv")
+
     evaluate_model(original_df, "Original")
     evaluate_model(binned_df, "Binned")
