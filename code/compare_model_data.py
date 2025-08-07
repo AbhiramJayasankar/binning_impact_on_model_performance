@@ -37,10 +37,13 @@ if __name__ == "__main__":
     # original_df = pd.read_csv("data/merged_raw_sampled_500.csv")
     original_df = pd.read_csv("data/merged_raw_sampled_500_date_only.csv")
 
+    binned_df = pd.read_csv("data/merged_raw_discretized_500_week_month_comp_binned.csv")
     # binned_df = pd.read_csv("data/discretized_raw_sampled_500.csv")
     # binned_df = pd.read_csv("data/discretized_month_raw_sampled_500.csv")
-    binned_df = pd.read_csv("data/merged_raw_sampled_500_week_month.csv")
+    binned_df_2 = pd.read_csv("data/merged_raw_discretized_500_week_month.csv")
     # binned_df = pd.read_csv("data/discretized_d3_raw_sampled_500.csv")
 
     evaluate_model(original_df, "Original")
     evaluate_model(binned_df, "Binned")
+    evaluate_model(binned_df_2, "Binned_old")
+

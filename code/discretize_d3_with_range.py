@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.tree import DecisionTreeRegressor
 
-def supervised_binning(feature, target, max_bins=10, min_samples_split=50):
+def supervised_binning(feature, target, max_bins=15, min_samples_split=25):
     mask = ~(pd.isna(feature) | pd.isna(target))
     feature_clean = feature[mask]
     target_clean = target[mask]

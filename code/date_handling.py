@@ -67,6 +67,6 @@ if __name__ == "__main__":
     # Define paths
     input_file = '../data/merged_raw_sampled_500.csv'
     output_no_weeks = '../data/merged_raw_sampled_500_date_only.csv'
-    output_months_only = '../data/merged_raw_sampled_500_week_month.csv'
+    output_months_only = '../data/merged_raw_discretized_500_week_month.csv'
     
     process_merged_data(input_file, output_no_weeks, output_months_only)
